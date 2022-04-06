@@ -1,1 +1,0 @@
-.snake{position:absolute;left:0;top:0;background-color:red;z-index:10;will-change:transform}.map{position:relative;background-color:grey}.map .col{display:flex}.map .grid{border:1px solid #000}*,:after,:before{box-sizing:border-box}
