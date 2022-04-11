@@ -6,12 +6,13 @@ export const foodData = {};
 export default function createFood(root) {
   if (!root) { return; }
 
-  // eslint-disable-next-line max-len
-  const createPositions = maps.filter((map) => !snakes.value.find((snake) => (map.x === snake.x && map.y === snake.y)));
-  const { length } = createPositions;
+  const createPositions = maps.filter(
+    (map) => !snakes.value.find((snake) => (map.x === snake.x && map.y === snake.y)),
+  );
+  const createPosition = createPositions[Math.floor(Math.random() * createPositions.length)];
 
-  foodData.x = createPositions[Math.floor(Math.random() * length)].x;
-  foodData.y = createPositions[Math.floor(Math.random() * length)].y;
+  foodData.x = createPosition.x;
+  foodData.y = createPosition.y;
   foodData.type = 'food';
 
   const food = document.createElement('div');
